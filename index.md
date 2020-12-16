@@ -79,3 +79,5 @@ This was a group project where the team developed different security features/ha
 > pip install APScheduler <br>
 > pip install safety <br>
 > pip install pyOpenSSL <br>
+
+&nbsp;
