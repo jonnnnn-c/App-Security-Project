@@ -37,6 +37,7 @@ Owen  | API4: Lack of Resources and Rate Limiting <br/> API8: Injection
 - Dynamic
   - [OWASP ZAP](https://www.zaproxy.org/)
   - [Bandit](https://pypi.org/project/bandit/)
+> [View Report](Vulnerable/Reports)
 
 &nbsp;
 ## Secured Version :lock:
