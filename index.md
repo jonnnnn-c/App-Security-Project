@@ -52,6 +52,7 @@ This was a group project where the team developed different security features/ha
 &nbsp;
 ### Scanning Vulnerabilities:
 > [View Report](Vulnerable_Reports.md) <br/>
+
 - Static
   - [snyk.io](https://snyk.io/)
   - [HCL AppScan CodeSweep](https://marketplace.visualstudio.com/items?itemName=HCLTechnologies.hclappscancodesweep)
