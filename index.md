@@ -2,7 +2,7 @@
 This was a group project where the team developed different security features/hardening techniques for a Web Application Programming Interface (API) using Flask. We are required to create two versions of the project. One vulnerable version and the other secured version where we have to fix all the issues from the vulnerable version based on the [OWASP Top 10 API security.](https://owasp.org/www-project-api-security/)
 
 &nbsp;
-## Members: :sunglasses:
+## Members:
 - Jingling
 - Laraine
 - Jonathan
@@ -23,7 +23,7 @@ Owen  | API4: Lack of Resources and Rate Limiting <br/> API8: Injection
 - SQLite (open database)
 
 &nbsp;
-## Vulnerable Version :unlock:
+## Vulnerable Version
 ### Requirements:
 > pip install Flask <br>
 > pip install Flask-Mail <br>
@@ -44,7 +44,7 @@ Owen  | API4: Lack of Resources and Rate Limiting <br/> API8: Injection
   - [Bandit](https://pypi.org/project/bandit/)
 
 &nbsp;
-## Secured Version :lock:
+## Secured Version
 ### Requirements:
 > pip install Flask <br>
 > pip install Flask-Mail <br>
