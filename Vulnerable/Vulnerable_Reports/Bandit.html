@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+    Bandit Report
+</title>
+
+<style>
+
+html * {
+    font-family: "Arial", sans-serif;
+}
+
+pre {
+    font-family: "Monaco", monospace;
+}
+
+.bordered-box {
+    border: 1px solid black;
+    padding-top:.5em;
+    padding-bottom:.5em;
+    padding-left:1em;
+}
+
+.metrics-box {
+    font-size: 1.1em;
+    line-height: 130%;
+}
+
+.metrics-title {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: .25em;
+}
+
+.issue-description {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.candidate-issues {
+    margin-left: 2em;
+    border-left: solid 1px; LightGray;
+    padding-left: 5%;
+    margin-top: .2em;
+    margin-bottom: .2em;
+}
+
+.issue-block {
+    border: 1px solid LightGray;
+    padding-left: .5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+}
+
+.issue-sev-high {
+    background-color: Pink;
+}
+
+.issue-sev-medium {
+    background-color: NavajoWhite;
+}
+
+.issue-sev-low {
+    background-color: LightCyan;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="metrics">
+    <div class="metrics-box bordered-box">
+        <div class="metrics-title">
+            Metrics:<br>
+        </div>
+        Total lines of code: <span id="loc">1353</span><br>
+        Total lines skipped (#nosec): <span id="nosec">0</span>
+    </div>
+</div>
+
+
+
+
+<br>
+<div id="results">
+    
+<div id="issue-0">
+<div class="issue-block issue-sev-low">
+    <b>hardcoded_password_funcarg: </b> Possible hardcoded password: 'project-store'<br>
+    <b>Test ID:</b> B106<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="app.py" target="_blank">app.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html</a><br>
+
+<div class="code">
+<pre>
+22	
+23	app.config.update(
+24	    DEBUG=True,
+25	    ENV=&quot;development&quot;,
+26	
+27	    # Database config
+28	    SQLALCHEMY_DATABASE_URI=&#x27;sqlite:///&#x27; + os.path.join(basedir, &#x27;store.db&#x27;),
+29	
+30	    # Authentication Config
+31	    JWT_SECRET_KEY=&#x27;project-store&#x27;,
+32	    JWT_ACCESS_TOKEN_EXPIRES=1000,
+33	    JWT_BLACKLIST_ENABLED=True,
+34	    JWT_BLACKLIST_TOKEN_CHECKS=[&#x27;access&#x27;],
+35	
+36	    # Mail config
+37	    MAIL_SERVER=&#x27;smtp.mailtrap.io&#x27;,
+38	    MAIL_PORT=2525,
+39	    MAIL_USERNAME=&#x27;12dbf006d8cf45&#x27;,
+40	    MAIL_PASSWORD=&#x27;7c418e544b23d6&#x27;,
+41	    MAIL_USE_TLS=False,
+42	    MAIL_USE_SSL=False,
+43	    MAIL_FROM_EMAIL=&#x27;glomz@store-api.com&#x27;,
+44	)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-1">
+<div class="issue-block issue-sev-low">
+    <b>hardcoded_password_funcarg: </b> Possible hardcoded password: 'password'<br>
+    <b>Test ID:</b> B106<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="app.py" target="_blank">app.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html</a><br>
+
+<div class="code">
+<pre>
+140	
+141	    customer1 = Customer(customer_fname=&quot;Test&quot;,
+142	                         customer_lname=&quot;1&quot;,
+143	                         customer_gender=&quot;Male&quot;,
+144	                         customer_email=&quot;test1@gmail.com&quot;,
+145	                         customer_phone=92783652,
+146	                         customer_points=0,
+147	                         customer_password=&quot;password&quot;)
+148	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-2">
+<div class="issue-block issue-sev-low">
+    <b>hardcoded_password_funcarg: </b> Possible hardcoded password: 'test'<br>
+    <b>Test ID:</b> B106<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="app.py" target="_blank">app.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html</a><br>
+
+<div class="code">
+<pre>
+148	
+149	    customer2 = Customer(customer_fname=&quot;Test&quot;,
+150	                         customer_lname=&quot;2&quot;,
+151	                         customer_gender=&quot;Female&quot;,
+152	                         customer_email=&quot;test2@gmail.com&quot;,
+153	                         customer_phone=93829173,
+154	                         customer_points=0,
+155	                         customer_password=&quot;test&quot;)
+156	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-3">
+<div class="issue-block issue-sev-low">
+    <b>hardcoded_password_funcarg: </b> Possible hardcoded password: '12345'<br>
+    <b>Test ID:</b> B106<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="app.py" target="_blank">app.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html</a><br>
+
+<div class="code">
+<pre>
+156	
+157	    customer3 = Customer(customer_fname=&quot;Test&quot;,
+158	                         customer_lname=&quot;3&quot;,
+159	                         customer_gender=&quot;Others&quot;,
+160	                         customer_email=&quot;test3@gmail.com&quot;,
+161	                         customer_phone=83782983,
+162	                         customer_points=0,
+163	                         customer_password=&quot;12345&quot;)
+164	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-4">
+<div class="issue-block issue-sev-low">
+    <b>hardcoded_password_funcarg: </b> Possible hardcoded password: 'passwd'<br>
+    <b>Test ID:</b> B106<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="app.py" target="_blank">app.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html</a><br>
+
+<div class="code">
+<pre>
+168	
+169	    staff1 = Staff(staff_fname=&quot;Gianni&quot;,
+170	                   staff_lname=&quot;Spencer&quot;,
+171	                   staff_email=&quot;gianni@business.com&quot;,
+172	                   staff_gender=&quot;Female&quot;,
+173	                   staff_phone=92837182,
+174	                   staff_position=&quot;Customer Representative&quot;,  # Manage Customers
+175	                   staff_password=&quot;passwd&quot;
+176	                   )
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-5">
+<div class="issue-block issue-sev-low">
+    <b>hardcoded_password_funcarg: </b> Possible hardcoded password: 'MichaelLin'<br>
+    <b>Test ID:</b> B106<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="app.py" target="_blank">app.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html</a><br>
+
+<div class="code">
+<pre>
+177	
+178	    staff2 = Staff(staff_fname=&quot;Michael&quot;,
+179	                   staff_lname=&quot;Lin&quot;,
+180	                   staff_email=&quot;michael@business.com&quot;,
+181	                   staff_gender=&quot;Male&quot;,
+182	                   staff_phone=83782918,
+183	                   staff_position=&quot;Product Manager&quot;,          # Manage Products
+184	                   staff_password=&quot;MichaelLin&quot;
+185	                   )
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-6">
+<div class="issue-block issue-sev-low">
+    <b>hardcoded_password_funcarg: </b> Possible hardcoded password: 'p@ssw0rd'<br>
+    <b>Test ID:</b> B106<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="app.py" target="_blank">app.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html</a><br>
+
+<div class="code">
+<pre>
+186	
+187	    staff3 = Staff(staff_fname=&quot;Eden&quot;,
+188	                   staff_lname=&quot;Estes&quot;,
+189	                   staff_email=&quot;eden@business.com&quot;,
+190	                   staff_gender=&quot;Female&quot;,
+191	                   staff_phone=84937823,
+192	                   staff_position=&quot;CEO&quot;,                      # Root Access
+193	                   staff_password=&quot;p@ssw0rd&quot;
+194	                   )
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-7">
+<div class="issue-block issue-sev-medium">
+    <b>hardcoded_sql_expressions: </b> Possible SQL injection vector through string-based query construction.<br>
+    <b>Test ID:</b> B608<br>
+    <b>Severity: </b>MEDIUM<br>
+    <b>Confidence: </b>LOW<br>
+    <b>File: </b><a href="app.py" target="_blank">app.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b608_hardcoded_sql_expressions.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b608_hardcoded_sql_expressions.html</a><br>
+
+<div class="code">
+<pre>
+477	        if login_staff.user_role == &quot;staff&quot;:
+478	            query = f&quot;SELECT product_id FROM products WHERE product_id = &#x27;{product_id}&#x27;&quot;
+479	            products_id = db.session.execute(query).fetchall()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-8">
+<div class="issue-block issue-sev-medium">
+    <b>hardcoded_sql_expressions: </b> Possible SQL injection vector through string-based query construction.<br>
+    <b>Test ID:</b> B608<br>
+    <b>Severity: </b>MEDIUM<br>
+    <b>Confidence: </b>LOW<br>
+    <b>File: </b><a href="app.py" target="_blank">app.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b608_hardcoded_sql_expressions.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b608_hardcoded_sql_expressions.html</a><br>
+
+<div class="code">
+<pre>
+480	            if products_id:
+481	                query = f&quot;DELETE FROM products WHERE product_id = &#x27;{product_id}&#x27; &quot;
+482	                db.session.execute(query)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-9">
+<div class="issue-block issue-sev-low">
+    <b>hardcoded_password_string: </b> Possible hardcoded password: ''<br>
+    <b>Test ID:</b> B105<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="app.py" target="_blank">app.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b105_hardcoded_password_string.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b105_hardcoded_password_string.html</a><br>
+
+<div class="code">
+<pre>
+1124	        customer_password = req_data[&#x27;customer_password&#x27;]  # can set password rules e.g. min 7 char blah blah
+1125	        if customer_password == &quot;&quot;:
+1126	            return jsonify(message=&quot;Field required&quot;), 409
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-10">
+<div class="issue-block issue-sev-medium">
+    <b>hardcoded_sql_expressions: </b> Possible SQL injection vector through string-based query construction.<br>
+    <b>Test ID:</b> B608<br>
+    <b>Severity: </b>MEDIUM<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="app.py" target="_blank">app.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b608_hardcoded_sql_expressions.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b608_hardcoded_sql_expressions.html</a><br>
+
+<div class="code">
+<pre>
+1164	    # Insecure sql statement that allows attacker to access any customer or staff account with their known email eg. douglas@gmail.com&#x27; or &#x27;1=1 and any password
+1165	    customer_user = db.session.execute(f&quot;SELECT * FROM Customer WHERE customer_email = &#x27;{user_email}&#x27; AND customer_password = &#x27;{user_password}&#x27;&quot;).first()
+1166	    staff_user = db.session.execute(f&quot;SELECT * FROM Staff WHERE staff_email = &#x27;{user_email}&#x27; AND staff_password = &#x27;{user_password}&#x27;&quot;).first()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-11">
+<div class="issue-block issue-sev-medium">
+    <b>hardcoded_sql_expressions: </b> Possible SQL injection vector through string-based query construction.<br>
+    <b>Test ID:</b> B608<br>
+    <b>Severity: </b>MEDIUM<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="app.py" target="_blank">app.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b608_hardcoded_sql_expressions.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b608_hardcoded_sql_expressions.html</a><br>
+
+<div class="code">
+<pre>
+1165	    customer_user = db.session.execute(f&quot;SELECT * FROM Customer WHERE customer_email = &#x27;{user_email}&#x27; AND customer_password = &#x27;{user_password}&#x27;&quot;).first()
+1166	    staff_user = db.session.execute(f&quot;SELECT * FROM Staff WHERE staff_email = &#x27;{user_email}&#x27; AND staff_password = &#x27;{user_password}&#x27;&quot;).first()
+1167	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
