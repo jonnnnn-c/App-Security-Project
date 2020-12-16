@@ -22,4 +22,5 @@
 [[View HTML Report]](Vulnerable_Reports/Bandit.html)
 
 &nbsp; 
-**[[Back]](../index.md)**
+&nbsp; 
+**[[Back]](./index.md)**
