@@ -22,4 +22,6 @@
 [[View HTML Report]](Vulnerable_Reports/Bandit.html)
 
 <br/>&nbsp;  
-**[[Go Back]](App-Security-Project)**
+**[[Go Back]](.)**
+
+&nbsp;  
