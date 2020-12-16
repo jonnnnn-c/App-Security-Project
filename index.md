@@ -1,37 +1,64 @@
-## Welcome to GitHub Pages
+# Introduction
+This was a group project where the team developed different security features/hardening techniques for a Web Application Programming Interface (API) using Flask. We are required to create two versions of the project. One vulnerable version and the other secured version where we have to fix all the issues from the vulnerable version based on the [OWASP Top 10 API security.](https://owasp.org/www-project-api-security/)
 
-You can use the [editor on GitHub](https://github.com/jonnnnn-c/App-Security-Project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+&nbsp;
+## Members: :sunglasses:
+- Jingling
+- Laraine
+- Jonathan
+- Owen
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+&nbsp;
+## Assigned OWASP API Vulnerability
+Name  | Vulnerability
+------------- | -------------
+Jingling  | API1: Broken Object Level Authorization <br/> API6: Mass Assignment
+Laraine  | API2: Broken User Authentication <br/> API5: Broken Function Level Authorization
+Jonathan  | API3: Excessive Data Exposure <br/> API7: Security Misconfiguration
+Owen  | API4: Lack of Resources and Rate Limiting <br/> API8: Injection
 
-### Markdown
+&nbsp;
+## Tools Used:
+- Postman (test API)
+- SQLite (open database)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+&nbsp;
+## Vulnerable Version :unlock:
+### Requirements:
+> pip install Flask <br>
+> pip install Flask-Mail <br>
+> pip install Flask-JWT-Extended <br>
+> pip install Flask-SQLAlchemy <br>
+> pip install flask-Marshmallow <br>
+> pip install flask-rest-paginate <br>
+> pip install itsdangerous <br>
 
-```markdown
-Syntax highlighted code block
+&nbsp;
+### Scanning Vulnerabilities:
+> [View Report](Vulnerable/Reports)
+- Static
+  - [snyk.io](https://snyk.io/)
+  - [HCL AppScan CodeSweep](https://marketplace.visualstudio.com/items?itemName=HCLTechnologies.hclappscancodesweep)
+- Dynamic
+  - [OWASP ZAP](https://www.zaproxy.org/)
+  - [Bandit](https://pypi.org/project/bandit/)
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jonnnnn-c/App-Security-Project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+&nbsp;
+## Secured Version :lock:
+### Requirements:
+> pip install Flask <br>
+> pip install Flask-Mail <br>
+> pip install Flask-JWT-Extended <br>
+> pip install Flask-SQLAlchemy <br>
+> pip install Flask-RESTful <br>
+> pip install Flask-Limiter <br>
+> pip install flask-Marshmallow <br>
+> pip install flask-talisman <br>
+> pip install itsdangerous <br>
+> pip install twilio <br>
+> pip install bcrypt <br>
+> pip install pyotp <br>
+> pip install cryptography <br>
+> pip install APScheduler <br>
+> pip install safety <br>
+> pip install pyOpenSSL <br>
