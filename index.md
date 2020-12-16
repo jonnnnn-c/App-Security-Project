@@ -10,13 +10,6 @@ This was a group project where the team developed different security features/ha
 
 &nbsp;
 ## Assigned OWASP API Vulnerability
-Name  | Vulnerability
-------------- | -------------
-Jingling  | API1: Broken Object Level Authorization <br/> API6: Mass Assignment
-Laraine  | API2: Broken User Authentication <br/> API5: Broken Function Level Authorization
-Jonathan  | API3: Excessive Data Exposure <br/> API7: Security Misconfiguration
-Owen  | API4: Lack of Resources and Rate Limiting <br/> API8: Injection
-
 <table>
   <tr>
     <th>Name</th>
