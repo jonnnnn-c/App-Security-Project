@@ -10,6 +10,7 @@ This was a group project where the team developed different security features/ha
 
 &nbsp;
 ## Vulnerable Version :unlock:
+&nbsp;
 ### Requirements:
 > pip install Flask <br>
 > pip install Flask-Mail <br>
@@ -19,13 +20,14 @@ This was a group project where the team developed different security features/ha
 > pip install flask-rest-paginate <br>
 > pip install itsdangerous <br>
 
+&nbsp;
 ### Scanning Vulnerabilities:
 - Static
-  - Bandit 
-    > pip install bandit
+  - [Bandit](https://pypi.org/project/bandit/)
   - [HCL AppScan CodeSweep](https://marketplace.visualstudio.com/items?itemName=HCLTechnologies.hclappscancodesweep)
 - Dynamic
   - [OWASP ZAP](https://www.zaproxy.org/)
   - [snyk.io](https://snyk.io/)
 
+&nbsp;
 ## Secured Version :lock:
