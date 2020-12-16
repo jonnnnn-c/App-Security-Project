@@ -31,6 +31,7 @@ This was a group project where the team developed different security features/ha
     <td>Owen</td>
     <td>API4: Lack of Resources and Rate Limiting <br/> API8: Injection</td>
   </tr>
+</table>
 
 &nbsp;
 ## Tools Used:
