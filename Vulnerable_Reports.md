@@ -19,8 +19,8 @@
 
 &nbsp; 
 ### 2.  Bandit 
-[[View HTML Report]](Vulnerable_Reports/Bandit.html)
+[[View HTML Report]](Vulnerable_Reports/Bandit.html) <br/>
 
 &nbsp; 
 &nbsp; 
-[[Go Back]](App-Security-Project/)
+**[[Go Back]](/)**
