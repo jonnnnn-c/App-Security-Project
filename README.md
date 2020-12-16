@@ -35,7 +35,7 @@ Owen  | API4: Lack of Resources and Rate Limiting <br/> API8: Injection
 
 &nbsp;
 ### Scanning Vulnerabilities:
-> [View Report](Vulnerable/Reports)
+> [View Report](Vulnerable/Vulnerable_Reports)
 - Static
   - [snyk.io](https://snyk.io/)
   - [HCL AppScan CodeSweep](https://marketplace.visualstudio.com/items?itemName=HCLTechnologies.hclappscancodesweep)
