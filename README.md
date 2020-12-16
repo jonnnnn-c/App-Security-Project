@@ -17,6 +17,10 @@ Laraine  | API2: Broken User Authentication <br/> API5: Broken Function Level Au
 Jonathan  | API3: Excessive Data Exposure <br/> API7: Security Misconfiguration
 Owen  | API4: Lack of Resources and Rate Limiting <br/> API8: Injection
 
+&nbsp;
+## Tools Used:
+- Postman (test API)
+- SQLite (open database)
 
 &nbsp;
 ## Vulnerable Version :unlock:
@@ -31,13 +35,30 @@ Owen  | API4: Lack of Resources and Rate Limiting <br/> API8: Injection
 
 &nbsp;
 ### Scanning Vulnerabilities:
+> [View Report](Vulnerable/Reports)
 - Static
   - [snyk.io](https://snyk.io/)
   - [HCL AppScan CodeSweep](https://marketplace.visualstudio.com/items?itemName=HCLTechnologies.hclappscancodesweep)
 - Dynamic
   - [OWASP ZAP](https://www.zaproxy.org/)
   - [Bandit](https://pypi.org/project/bandit/)
-  > [View Report](Vulnerable/Reports)
 
 &nbsp;
 ## Secured Version :lock:
+### Requirements:
+> pip install Flask <br>
+> pip install Flask-Mail <br>
+> pip install Flask-JWT-Extended <br>
+> pip install Flask-SQLAlchemy <br>
+> pip install Flask-RESTful <br>
+> pip install Flask-Limiter <br>
+> pip install flask-Marshmallow <br>
+> pip install flask-talisman <br>
+> pip install itsdangerous <br>
+> pip install twilio <br>
+> pip install bcrypt <br>
+> pip install pyotp <br>
+> pip install cryptography <br>
+> pip install APScheduler <br>
+> pip install safety <br>
+> pip install pyOpenSSL <br>
