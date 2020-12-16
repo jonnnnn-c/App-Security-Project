@@ -10,7 +10,6 @@ This was a group project where the team developed different security features/ha
 
 &nbsp;
 ## Vulnerable Version :unlock:
-&nbsp;
 ### Requirements:
 > pip install Flask <br>
 > pip install Flask-Mail <br>
